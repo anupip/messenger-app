@@ -1,0 +1,32 @@
+
+.message {
+  display: flex;
+  margin: 10px 0;
+}
+
+.message__user {
+  justify-content: flex-end;
+}
+
+.message__guest {
+  justify-content: flex-start;
+}
+
+.user-card {
+  background-color: #9fd0fa !important;
+  color: white;
+}
+
+.guest-card {
+  background-color: white !important;
+  color: #333;
+}
+
+.message .MuiCard-root {width: -moz-fit-content;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.message .MuiCardContent-root {
+  padding: 10px 20px;
+}

@@ -1,38 +1,110 @@
-.App {
+* {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 20px;
+  background-color: #f9f9f9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.img {
+  height: 100px;
+  width: 100px;
+}
+
+h1 {
+  color: rgb(62, 57, 57);
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  margin-bottom: 80px; /* Ensure this is correct for your layout */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.messages::after {
+  content: '';
+  display: block;
+  height: 1px; /* Creates a small buffer space at the end of the message list */
+}
+
+.app-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #42a5f5;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-box {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: larger;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: #edeef0;
+}
+
+.input-box:focus {
+  background-color: #ffffff;
+}
+
+.input-box::placeholder {
+  color: #ccc;
+}
+
+.send-button {
+  border-radius: 40px;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  color: #000000;
+  font-weight: 500;
+  padding: 14px 50px;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send-button:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
 }
